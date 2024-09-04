@@ -1,0 +1,10 @@
+[Unit]
+Description=Automatic Brightness Adjustment Service
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/auto-brightness.sh
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

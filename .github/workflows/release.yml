@@ -1,0 +1,23 @@
+name: C release
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: make
+      run: make archive
+
+    - uses: ncipollo/release-action@v1
+      with:
+        artifacts: auto-brightness.zip
+        allowUpdates: true
+        prerelease: true
+        commit: main
+        tag: dev

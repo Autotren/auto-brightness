@@ -17,7 +17,7 @@ jobs:
       run: ls -lha
     - uses: ncipollo/release-action@v1
       with:
-        artifacts: auto-brightness.zip
+        artifacts: "./auto-brightness.zip"
         allowUpdates: true
         prerelease: true
         commit: main

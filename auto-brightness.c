@@ -151,7 +151,7 @@ int main(int argc, char *argv[])
         {
             printf("Usage: %s --help --verbose --illuminance-path \"/sys/bus/iio/devices/iio:device0/in_illuminance_input\" --set-integration --illuminance-integration-time-path \"/sys/bus/iio/devices/iio:device0/in_illuminance_integration_time\" --illuminance-integration-time 0.8 --illuminance-min 0 --illuminance-max 30 --poll-interval 800 --step-const 10 --step-min 100 --step-max 1000 --brightness-path \"/sys/class/backlight/intel_backlight/brightness\" --max-brightness-path \"/sys/class/backlight/intel_backlight/max_brightness\" --brightness-interval 50\n"
                    "\nArguments explanation:\n"
-                   "--help: Show this help information and exit"
+                   "--help: Show this help information and exit\n"
                    "--verbose: Show debug information\n"
                    "--illuminance-path: Path to light sensor file\n"
                    "--set-integration: Enables writing integration time value to the sensor\n"

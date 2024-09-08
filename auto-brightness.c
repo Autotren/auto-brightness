@@ -246,7 +246,7 @@ int main(int argc, char *argv[])
 
     if (set_integration == 1)
     {
-        char *illuminance_integration_time_str;
+        char illuminance_integration_time_str[5];
         gcvt(illuminance_integration_time, 4, illuminance_integration_time_str);
         if (verbose == 1)
         {

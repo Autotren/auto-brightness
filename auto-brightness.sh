@@ -3,9 +3,13 @@
 # Define delimiter as comma for "brightnessctl -m"
 IFS=","
 
+# Increase the integration time to reduce sensor noise
+# In my case the available values are on /sys/bus/iio/devices/iio:device0/in_illuminance_integration_time_available
+echo 0.800000 | tee "/sys/bus/iio/devices/iio:device0/in_illuminance_integration_time" # Remove this if not supported on your sensor
+
 illuminance_sensor_path="/sys/bus/iio/devices/iio:device0/in_illuminance_input" # Path of your ambient sensor
 illuminance_min=0 # Below this value the brightness will be 0
-illuminance_max=50 # Above this value the brightness will be maxed
+illuminance_max=30 # Above this value the brightness will be maxed
 
 step_const=10 # The value to divide the brightness difference by
 min_step=100 # Minimum absolute step value

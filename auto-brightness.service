@@ -3,7 +3,8 @@ Description=Automatic Brightness Adjustment Service
 After=network.target
 
 [Service]
-ExecStart=/usr/local/bin/auto-brightness.sh
+# Adjust the cli arguments on the following line
+ExecStart=/usr/local/bin/auto-brightness --set-integration
 Restart=always
 
 [Install]

@@ -226,7 +226,7 @@ int main(int argc, char *argv[])
             brightness_interval = atoi(argv[i + 1]);
         }
     }
-    printf("Run with --help to show help\n");
+    printf("C Automatic Brightness Control Program\nRun with --help to show help\n");
     if (verbose == 1)
     {
         printf("\nLaunching with arguments: \n");
